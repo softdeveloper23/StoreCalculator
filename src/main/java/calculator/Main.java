@@ -1,17 +1,16 @@
 package calculator;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Prices:");
-        System.out.println("Bubblegum: $2");
-        System.out.println("Toffee: $0.2");
-        System.out.println("Ice cream: $5");
-        System.out.println("Milk chocolate: $4");
-        System.out.println("Doughnut: $2.5");
-        System.out.println("Pancake: $3.2");
-        System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        // Ask user for their name
+        System.out.println("What's your name?");
+        String name = scanner.nextLine();
+        System.out.printf("Hello, %s!", name);
 
-        double total = 202 + 118 + 2250 + 1680 + 1075 + 80;
+        int total = 202 + 118 + 2250 + 1680 + 1075 + 80;
+
         System.out.println("Earned amount:");
         System.out.println("Bubblegum: $202");
         System.out.println("Toffee: $118");
@@ -21,5 +20,15 @@ public class Main {
         System.out.println("Pancake: $80");
         System.out.println();
         System.out.println("Income: $" + total);
+
+        System.out.println("Staff expenses:");
+        int staffExpenses = scanner.nextInt();
+
+        System.out.println("Other expenses:");
+        int otherExpenses = scanner.nextInt();
+
+        int netIncome = total - (staffExpenses + otherExpenses);
+
+        System.out.printf("Net income: $%d", netIncome);
     }
 }
