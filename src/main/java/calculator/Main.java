@@ -7,7 +7,7 @@ public class Main {
         // Ask user for their name
         System.out.println("What's your name?");
         String name = scanner.nextLine();
-        System.out.printf("Hello, %s!", name);
+        System.out.printf("Hello, %s!\n", name);
 
         int total = 202 + 118 + 2250 + 1680 + 1075 + 80;
 
