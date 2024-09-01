@@ -46,5 +46,7 @@ public class Main {
         double netIncome = total - (staffExpenses + otherExpenses);
 
         System.out.printf("\nYour net income for the month is: $%.2f", netIncome);
+
+        scanner.close();
     }
 }
